@@ -5,13 +5,15 @@
 
 Gem::Specification.new do |s|
   s.name = %q{machine-head}
-  s.version = "0.0.0"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Rusty Burchfield"]
   s.date = %q{2010-07-29}
+  s.default_executable = %q{scanner.rb}
   s.description = %q{Ruby API for HDHomeRun dual ATSC tuner.  Requires hdhomerun_config.}
   s.email = %q{GICodeWarrior@gmail.com}
+  s.executables = ["scanner.rb"]
   s.extra_rdoc_files = [
     "LICENSE",
      "README.rdoc"
@@ -23,6 +25,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "bin/scanner.rb",
      "lib/machine-head.rb",
      "lib/machine_head/device.rb",
      "lib/machine_head/status.rb",
@@ -47,11 +50,14 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<gnuplot>, [">= 2.3.1"])
       s.add_development_dependency(%q<rspec>, [">= 1.2.9"])
     else
+      s.add_dependency(%q<gnuplot>, [">= 2.3.1"])
       s.add_dependency(%q<rspec>, [">= 1.2.9"])
     end
   else
+    s.add_dependency(%q<gnuplot>, [">= 2.3.1"])
     s.add_dependency(%q<rspec>, [">= 1.2.9"])
   end
 end
