@@ -10,6 +10,7 @@ begin
     gem.email = "GICodeWarrior@gmail.com"
     gem.homepage = "http://github.com/GICodeWarrior/machine-head"
     gem.authors = ["Rusty Burchfield"]
+    gem.add_dependency 'gnuplot', '>= 2.3.1'
     gem.add_development_dependency "rspec", ">= 1.2.9"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
