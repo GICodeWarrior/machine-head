@@ -24,6 +24,10 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "lib/machine-head.rb",
+     "lib/machine_head/device.rb",
+     "lib/machine_head/status.rb",
+     "lib/machine_head/tuner.rb",
+     "machine-head.gemspec",
      "spec/machine-head_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb"
